@@ -278,7 +278,7 @@ export class DragHandler {
         const pile = this.state.tableau[target.index];
         const stackHeight = pile.length * TABLEAU_OFFSET;
         targetRect.height += stackHeight;
-        targetRect.y += stackHeight; // Target is top of stack
+        // Don't move Y - we want the hit area to cover from base to top of stack
       }
 
       const overlap = this.calculateOverlap(cardRect, targetRect);
